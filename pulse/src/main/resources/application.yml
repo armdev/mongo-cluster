@@ -1,0 +1,34 @@
+management:
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+  endpoints:
+    jmx:
+      exposure:
+       include: '*'
+    web:
+     exposure:
+      include: '*'
+      base-path: /actuator
+    cors:
+      allowed-origins: 'true'
+      enabled-by-default: 'false'
+    
+server:
+    http2:
+     enabled: true
+    port: 9021
+   
+    
+spring:
+  application:
+    name: pulse  
+    
+  profiles:
+    active:
+      default
+ 
+  data: 
+   mongodb:      
+       uri: mongodb://masterx:masterx@mongo2:27017/pulseDB?replicaSet=dbrs&readPreference=primaryPreferred&authSource=admin

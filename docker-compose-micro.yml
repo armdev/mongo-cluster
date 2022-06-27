@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  
+  pulse:
+    image: pulse
+    build: ./pulse 
+    container_name: pulse   
+    ports:
+      - '9021:9021'  
+    networks:
+      - mongo-network
+
+networks:
+  mongo-network:
+    driver: bridge
