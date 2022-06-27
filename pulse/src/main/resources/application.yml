@@ -31,4 +31,4 @@ spring:
  
   data: 
    mongodb:      
-       uri: mongodb://masterx:masterx@mongo2:27017/pulseDB?replicaSet=dbrs&readPreference=primaryPreferred&authSource=admin
+       uri: mongodb://masterx:masterx@mongo1:27017/pulseDB?replicaSet=dbrs&readPreference=primaryPreferred&authSource=admin

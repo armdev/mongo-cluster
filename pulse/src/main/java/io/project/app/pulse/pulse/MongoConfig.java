@@ -35,7 +35,7 @@ public class MongoConfig extends AbstractMongoClientConfiguration{
     @Override
     public MongoClient mongoClient() {
         ///mongodb://masterx:masterx@mongo2:27017/pulseDB?replicaSet=dbrs&readPreference=secondaryPreferred&authSource=admin
-        final ConnectionString connectionString = new ConnectionString("mongodb://masterx:masterx@mongo2:27017/pulseDB?replicaSet=dbrs&readPreference=primaryPreferred&authSource=admin");
+        final ConnectionString connectionString = new ConnectionString("mongodb://masterx:masterx@mongo1:27017/pulseDB?replicaSet=dbrs&readPreference=primaryPreferred&authSource=admin");
         final MongoClientSettings mongoClientSettings = MongoClientSettings.builder()
             .applyConnectionString(connectionString)
             .build();
