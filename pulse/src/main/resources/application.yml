@@ -30,5 +30,6 @@ spring:
       default
  
   data: 
-   mongodb:      
+   mongodb:
+       auto-index-creation: true
        uri: mongodb://masterx:masterx@mongo1:27017/pulseDB?replicaSet=dbrs&readPreference=primaryPreferred&authSource=admin
